@@ -19,6 +19,9 @@ require("lazy").setup({
   }
 })
 
+-- Set highlight on search
+vim.o.hlsearch = false
+
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
