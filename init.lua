@@ -117,6 +117,12 @@ if not vim.loop.fs_stat(lazypath) then
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
+-- Load alternative config when using VSCode
+if vim.g.vscode then
+  require "custom/vscode"
+  return
+end
+
 -- [[ Configure and install plugins ]]
 --
 --  To check the current status of your plugins, run
