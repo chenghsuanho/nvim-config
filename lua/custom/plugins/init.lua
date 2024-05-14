@@ -5,22 +5,22 @@
 return {
   -- Switch Input Method automatically depends on Neovim's edit mode.
   {
-    "keaising/im-select.nvim",
+    'keaising/im-select.nvim',
     Lazy = false,
     config = function()
-      require("im_select").setup({})
+      require('im_select').setup {}
     end,
   },
 
   -- Surround text with pairs of symbols.
   {
-    "kylechui/nvim-surround",
-    version = "*", -- Use for stability; omit to use `main` branch for the latest features
-    event = "VeryLazy",
+    'kylechui/nvim-surround',
+    version = '*', -- Use for stability; omit to use `main` branch for the latest features
+    event = 'VeryLazy',
     config = function()
-      require("nvim-surround").setup({})
-    end
-  }
+      require('nvim-surround').setup {}
+    end,
+  },
 }
 
 -- vim: ts=2 sts=2 sw=2 et
