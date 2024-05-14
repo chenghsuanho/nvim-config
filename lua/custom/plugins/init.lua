@@ -2,11 +2,16 @@
 --  I promise not to create any merge conflicts in this directory :)
 --
 -- See the kickstart.nvim README for more information
+
+-- Check if in an SSH session
+local is_ssh = os.getenv 'SSH_CONNECTION' ~= nil
+
 return {
   -- Switch Input Method automatically depends on Neovim's edit mode.
   {
     'keaising/im-select.nvim',
-    Lazy = false,
+    lazy = false,
+    cond = not is_ssh,
     config = function()
       require('im_select').setup {}
     end,
