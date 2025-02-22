@@ -1,12 +1,12 @@
 require('lazy').setup {
   -- Switch Input Method automatically depends on Neovim's edit mode.
-  {
-    'keaising/im-select.nvim',
-    Lazy = false,
-    config = function()
-      require('im_select').setup {}
-    end,
-  },
+  -- {
+  --   'keaising/im-select.nvim',
+  --   Lazy = false,
+  --   config = function()
+  --     require('im_select').setup {}
+  --   end,
+  -- },
 
   -- Surround text with pairs of symbols.
   {
